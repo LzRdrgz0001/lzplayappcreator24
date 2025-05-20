@@ -326,11 +326,11 @@ ${episodeList}
 
 <!-- Navegación inferior -->
 <div class="bottom-nav">
-<a class="active" href="go:inicio">
+<a class="active" href="go:home">
 <i class="fa fa-arrow-left"></i>
 <span>Regresar</span>
 </a>
-<a href="go:BU">
+<a href="go:Buscar">
 <i class="fas fa-search"></i>
 <span>Buscar</span>
 </a>
