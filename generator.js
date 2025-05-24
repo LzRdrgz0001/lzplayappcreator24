@@ -390,16 +390,23 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Filtro de temporadas
-  seasonSelect.addEventListener('change', function () {
-    const selectedSeason = seasonSelect.value;
-    const episodes = episodeList.querySelectorAll('.episode-item[data-season="' + selectedSeason + '"]');
+ seasonSelect.addEventListener('change', function () {
+  const selectedSeason = seasonSelect.value;
 
-    episodes.forEach(function (episode) {
-      episode.style.display = episode.getAttribute('data-season') === selectedSeason ? 'flex' : 'none';
-    });
-
-    updateProgress();
+  // Ocultar todos los episodios
+  const allEpisodes = episodeList.querySelectorAll('.episode-item');
+  allEpisodes.forEach(function (ep) {
+    ep.style.display = 'none';
   });
+
+  // Mostrar solo los de la temporada seleccionada
+  const selectedEpisodes = episodeList.querySelectorAll('.episode-item[data-season="' + selectedSeason + '"]');
+  selectedEpisodes.forEach(function (ep) {
+    ep.style.display = 'flex';
+  });
+
+  updateProgress();
+});
 
   // Cargar último episodio automáticamente
   const lastVideo = localStorage.getItem(serieId + "-last-watched");
@@ -487,7 +494,7 @@ ${datos.name} (${datos.first_air_date.slice(0,4)}) `;
                     
                     let seasonOnly = `
                     <option value="season${seasonNumber}">Temporada ${seasonNumber}</option>
-                    
+                
                     ${episodeList}
                     </ul><!--Siguiente temporada debajo-->
     
