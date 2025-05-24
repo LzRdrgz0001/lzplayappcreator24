@@ -326,11 +326,11 @@ ${episodeList}
 
 <!-- Navegación inferior -->
 <div class="bottom-nav">
-<a class="active" href="go:home">
+<a class="active" href="go:inicio">
 <i class="fa fa-arrow-left"></i>
 <span>Regresar</span>
 </a>
-<a href="go:Buscar">
+<a href="go:BU">
 <i class="fas fa-search"></i>
 <span>Buscar</span>
 </a>
@@ -483,11 +483,11 @@ function toggleSynopsis() {
 
 
 
-${datos.name} (${datos.first_air_date.slice(0,4)}) lz
-                    `;
+${datos.name} (${datos.first_air_date.slice(0,4)}) `;
                     
                     let seasonOnly = `
-                    <ul class="caps-grid hide" id="season-${seasonNumber}">
+                    <option value="season${seasonNumber}">Temporada ${seasonNumber}</option>
+                    
                     ${episodeList}
                     </ul><!--Siguiente temporada debajo-->
     
