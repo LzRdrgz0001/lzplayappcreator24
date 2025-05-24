@@ -587,7 +587,7 @@ ${datos.name} (${datos.first_air_date.slice(0,4)}) `;
           <p class="text-gray-300 italic text-sm">LzPlay:</p>
           <div class="flex flex-wrap items-center space-x-2 text-xs text-gray-400 mt-1">
             <span>${datos.production_countries.map(c => c.name).join(', ')}</span>
-          <span id="info-hours">h</span>
+          <span id="info-hours"></span>
 <span id="info-minutes">minutos:${datos.runtime}</span>
 <span>Año: ${datos.release_date.slice(0,4)}</span>
           </div>
