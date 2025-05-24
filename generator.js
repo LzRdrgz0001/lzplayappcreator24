@@ -336,10 +336,10 @@ ${episodeList}
 </a>
 </div>
 
-const serieId = "${datos.name}"; // <--- cambia este ID en cada HTML de serie
+const serieId = "${datos.name}";
 
 <script>
-const serieId = "${datos.name}"; // Cambia esto por el ID único de la serie
+const serieId = "${datos.name}";
 
 document.addEventListener('DOMContentLoaded', function () {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
